@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhan Malik — Full-Stack Developer</title>
+<meta name="description" content="Subhan Malik is a full-stack developer in Lahore, Pakistan. 100+ open-source projects on GitHub, NASA Space Apps Challenge 2026 Galactic Problem Solver.">
+<style>
+  :root { --black:#000; --white:#fff; --grey:#555; --light:#f4f4f4; --border:#e0e0e0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:#111; background:var(--white); line-height:1.6; }
+  a { color:inherit; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 24px; }
+
+  /* Nav */
+  nav { position:sticky; top:0; background:var(--white); border-bottom:1px solid var(--border); z-index:10; }
+  nav .wrap { display:flex; justify-content:space-between; align-items:center; height:60px; }
+  nav .logo { font-weight:800; letter-spacing:.5px; text-decoration:none; font-size:17px; }
+  nav .logo span { font-weight:400; color:var(--grey); }
+  nav ul { list-style:none; display:flex; gap:26px; }
+  nav ul a { text-decoration:none; font-size:14px; font-weight:600; }
+  nav ul a:hover { text-decoration:underline; }
+  @media (max-width:640px){ nav ul { display:none; } }
+
+  /* Hero */
+  .hero { background:var(--black); color:var(--white); padding:72px 0 64px; }
+  .hero .wrap { display:flex; gap:48px; align-items:center; flex-wrap:wrap; }
+  .hero img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:3px solid var(--white); flex-shrink:0; }
+  .hero h1 { font-size:44px; line-height:1.1; letter-spacing:-1px; }
+  .hero h2 { font-size:19px; font-weight:600; margin:8px 0 14px; }
+  .hero p { color:#ccc; max-width:560px; font-size:16px; }
+  .hero .btns { margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:11px 22px; font-size:14px; font-weight:700; text-decoration:none; border:2px solid var(--white); }
+  .btn.solid { background:var(--white); color:var(--black); }
+  .btn.outline { color:var(--white); }
+  .btn:hover { opacity:.85; }
+
+  /* Stats */
+  .stats { border-bottom:1px solid var(--border); }
+  .stats .wrap { display:grid; grid-template-columns:repeat(4,1fr); }
+  .stat { padding:28px 12px; text-align:center; border-left:1px solid var(--border); }
+  .stat:first-child { border-left:none; }
+  .stat b { display:block; font-size:30px; line-height:1.1; }
+  .stat span { font-size:13px; color:var(--grey); }
+  @media (max-width:640px){ .stats .wrap { grid-template-columns:repeat(2,1fr); } .stat:nth-child(3){ border-left:none; } }
+
+  section { padding:56px 0; }
+  section h2 { font-size:13px; letter-spacing:2px; text-transform:uppercase; border-bottom:2px solid var(--black); padding-bottom:8px; margin-bottom:28px; }
+  section p.lead { font-size:17px; max-width:760px; }
+
+  /* Projects */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+  .card { border:1px solid var(--black); padding:22px; display:flex; flex-direction:column; }
+  .card:hover { background:var(--light); }
+  .card .tag { font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+  .card h3 { font-size:19px; margin:6px 0 8px; }
+  .card p { font-size:14.5px; color:#333; flex-grow:1; }
+  .card .meta { margin-top:14px; font-size:13px; color:var(--grey); }
+  .card a.repo { margin-top:10px; font-size:14px; font-weight:700; text-decoration:none; border-bottom:2px solid var(--black); align-self:flex-start; }
+  .more { margin-top:22px; font-size:15px; }
+  .more a { font-weight:700; }
+
+  /* Experience */
+  .job { margin-bottom:28px; }
+  .job .head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px; }
+  .job h3 { font-size:18px; }
+  .job .date { font-size:14px; color:var(--grey); font-style:italic; }
+  .job .org { font-size:14px; color:var(--grey); margin-bottom:8px; }
+  .job ul { margin-left:20px; font-size:15px; }
+  .job li { margin-bottom:5px; }
+
+  /* Skills */
+  .skillrow { display:grid; grid-template-columns:150px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid var(--border); font-size:15px; }
+  .skillrow b { font-size:15px; }
+  @media (max-width:640px){ .skillrow { grid-template-columns:1fr; gap:2px; } }
+
+  /* Contact */
+  .contact { background:var(--black); color:var(--white); }
+  .contact h2 { border-color:var(--white); }
+  .contact p { color:#ccc; max-width:600px; font-size:16px; }
+  .contact .links { margin-top:24px; display:flex; flex-direction:column; gap:10px; font-size:16px; }
+  .contact .links a { color:var(--white); font-weight:600; }
+  footer { padding:22px 0; font-size:13px; color:var(--grey); text-align:center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">SUBHAN MALIK <span>/ Developer</span></a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="profile.jpg" alt="Subhan Malik">
+    <div>
+      <h1>Subhan Malik</h1>
+      <h2>Full-Stack Developer — Lahore, Pakistan</h2>
+      <p>I build real software in public: 100+ open-source projects on GitHub, shipping three complete projects every day. NASA Space Apps Challenge 2026 Galactic Problem Solver.</p>
+      <div class="btns">
+        <a class="btn solid" href="https://github.com/Subhanmalik138" target="_blank" rel="noopener">View GitHub</a>
+        <a class="btn outline" href="Subhan-Malik-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>128+</b><span>Public repositories</span></div>
+    <div class="stat"><b>6</b><span>Languages</span></div>
+    <div class="stat"><b>3 / day</b><span>Projects shipped</span></div>
+    <div class="stat"><b>NASA</b><span>Galactic Problem Solver</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="lead">Full-stack developer from Lahore, Pakistan, currently pursuing a BS in Computer Science at the University of Engineering and Technology, Lahore. I work across Python, TypeScript, Go, Java, JavaScript and C#, with depth in distributed systems, databases, networking and developer tooling. Every project I ship has clean code, a real test suite and a human-written README.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="tag">C# · Database</div>
+        <h3>ChronoDB</h3>
+        <p>Embedded time-series database: write-ahead log, Gorilla-compressed segments, tag selectors, aggregations, downsampling, HTTP API and CLI.</p>
+        <div class="meta">67 xUnit tests</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/csharp-chronodb" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">JavaScript · Distributed Systems</div>
+        <h3>CollabEdit</h3>
+        <p>Real-time collaborative document editor: CRDT text sync over a zero-dependency WebSocket server, with rooms, presence and a durable operation log.</p>
+        <div class="meta">26 tests</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/js-collabedit" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">JavaScript · Distributed Systems</div>
+        <h3>RaftKV</h3>
+        <p>Distributed key-value store implementing the Raft consensus protocol — leader election, log replication and snapshotting, built from scratch with no dependencies.</p>
+        <div class="meta">Tested · Zero dependencies</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/js-raft-kv" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">C# · Database</div>
+        <h3>LsmStore</h3>
+        <p>Log-structured merge-tree storage engine with memtables, SSTables, compaction and Bloom-filter lookups.</p>
+        <div class="meta">Tested · CLI included</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/csharp-lsm-store" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">C# · Games / AI</div>
+        <h3>ChessEngine</h3>
+        <p>Complete chess engine: move generation, alpha-beta search and evaluation, with a playable CLI.</p>
+        <div class="meta">Tested · CLI included</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/csharp-chess-engine" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">Java · Parser</div>
+        <h3>JSONPath Query Engine</h3>
+        <p>Zero-dependency strict JSON parser with full RFC 9535 evaluation: recursive descent, filters, functions and normalized paths.</p>
+        <div class="meta">31 JUnit tests</div>
+        <a class="repo" href="https://github.com/Subhanmalik138/java-jsonpath" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+    <p class="more">Full portfolio (128 projects): <a href="https://github.com/Subhanmalik138?tab=repositories" target="_blank" rel="noopener">github.com/Subhanmalik138</a></p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="head"><h3>Independent Software Developer</h3><span class="date">Oct 2026 – Present</span></div>
+      <div class="org">Self-Employed · Lahore</div>
+      <ul>
+        <li>Ship three production-quality open-source projects daily — 128 public repositories, each with clean code, a real test suite and a human-written README.</li>
+        <li>Build databases, distributed systems, networking tools and parsers across six languages.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="head"><h3>NASA Data Engineer &amp; Scientific Research Data Specialist</h3><span class="date">Oct – Nov 2026</span></div>
+      <div class="org">PAKNOVA AI · FlameGuard AI — NASA Space Apps Challenge 2026</div>
+      <ul>
+        <li>Engineered a traceable, AI-ready dataset from authentic NASA microgravity combustion research — every record sourced, nothing invented.</li>
+        <li>Designed the dataset schema, comparison keys and Moon/Mars relevance ranking for the master set.</li>
+        <li>Awarded the NASA “Galactic Problem Solver” certificate.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skillrow"><b>Languages</b><span>Python · TypeScript · JavaScript · Go · Java · C#</span></div>
+    <div class="skillrow"><b>Systems</b><span>Distributed systems (Raft, CRDT) · Databases (LSM-tree, time-series, WAL) · Networking (TCP/UDP, WebSocket, HTTP)</span></div>
+    <div class="skillrow"><b>Tools &amp; Testing</b><span>Parsers &amp; compilers · CLI tooling · pytest, JUnit, node:test, go test, xUnit · Git &amp; GitHub · Linux</span></div>
+    <div class="skillrow"><b>Education</b><span>BS Computer Science (in progress) — University of Engineering and Technology, Lahore (2024 – Present)</span></div>
+    <div class="skillrow"><b>Languages</b><span>Urdu (Native) · English (Fluent)</span></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>Available for freelance work, collaborations and full-time opportunities. The fastest way to reach me is email or LinkedIn.</p>
+    <div class="links">
+      <span>Email: <a href="mailto:subhan138malik@gmail.com">subhan138malik@gmail.com</a></span>
+      <span>Phone: <a href="tel:03313855156">03313855156</a></span>
+      <span>LinkedIn: <a href="https://www.linkedin.com/in/subhan-m-925419331/" target="_blank" rel="noopener">linkedin.com/in/subhan-m-925419331</a></span>
+      <span>GitHub: <a href="https://github.com/Subhanmalik138" target="_blank" rel="noopener">github.com/Subhanmalik138</a></span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Subhan Malik · Lahore, Pakistan</footer>
+
+</body>
+</html>
